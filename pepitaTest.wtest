@@ -26,6 +26,7 @@ describe "Tests de Pepita" {
 	}
 
 	test "Al moverse pepita pierde energia por el trayecto" {
+		pepita.position(game.origin())
 		pepita.irA(game.at(1, 0))
 		assert.equals(91, pepita.energia())
 	}

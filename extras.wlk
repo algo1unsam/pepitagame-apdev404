@@ -17,7 +17,15 @@ object nido {
 object silvestre {
 
 	method image() = "silvestre.png"
-
-	method position() = game.origin()
+	var property posX = 3
+	method posicionX(){
+		if(pepita.position().x()>=3){
+			posX = pepita.position().x()
+		}
+		return posX
+	} 
+	method position() = game.at(self.posicionX(), 0)
 	
+	
+
 }
